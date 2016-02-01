@@ -14,7 +14,7 @@ include('KioskHeader.php');
     }
 
     body{
-    <?= isset($labels['bg_1920'])?'background-image:url("'.$labels['bg_1920'].'");':'' ?>
+    <?= isset($labels['bg_1080'])?'background-image:url("'.$labels['bg_1080'].'");':'' ?>
     }
 
     #container{
@@ -27,6 +27,7 @@ include('KioskHeader.php');
     #mainview{
         width: 1080px;
         height: 1760px;
+        padding: 40px;
 
     }
 
@@ -38,6 +39,9 @@ include('KioskHeader.php');
 
     <section id="u-header" class="banner-color view-port">
         <style>
+            #u-header{
+                height: 80px;
+            }
             #u-header>div{
                 display: inline-block;
             }
@@ -76,16 +80,27 @@ include('KioskHeader.php');
     <script>
         $(document).ready(function(){
 
+            console.log($('#mainview').width()+'x'+$('#mainview' ).height());
+            var width  = $('#mainview').width();
+            var height  = $('#mainview' ).height();
+
+            var cols = 5;
+            var rows = 7;
+            if(width<500){
+                rows=5;
+                cols=4;
+            }
+
             var options={
-                canvasWidth:1060,
-                canvasHeight:1760,
+                canvasWidth:width,
+                canvasHeight:height,
                 getimages:'rem/getimages',
                 thumbSize:150,
                 thumbDistance:200,
                 rowHeight:200,
                 rowWidth:1060,
                 rows:6,
-                cols:4,
+                cols:6,
                 prviewPaddingX:80,
                 prviewPaddingY:50,
                 previwWidth:900,

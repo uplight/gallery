@@ -7,7 +7,6 @@ $out->images = $ar;
 header('Content-Type: application/json');
 echo json_encode($ar);
 
-
 function getFiles($folder,$name){
     $ar=array();
     foreach(scandir('../media/imgs/'.$folder) as $file) if(strpos($file,'.jpg')!==FALSE){

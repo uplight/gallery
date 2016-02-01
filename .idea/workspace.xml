@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb44f87-701f-4d3c-ad52-a9ffdad8ff82" name="Default" comment="" />
+    <list default="true" id="deb44f87-701f-4d3c-ad52-a9ffdad8ff82" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/gallery/ImagesRowLarge.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile.php" afterPath="$PROJECT_DIR$/Mobile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gallery/Gallery4.js" afterPath="$PROJECT_DIR$/js/gallery/Gallery4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gallery/Gallery4.js.map" afterPath="$PROJECT_DIR$/js/gallery/Gallery4.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gallery/Gallery4.ts" afterPath="$PROJECT_DIR$/js/gallery/Gallery4.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gallery/ImagesRow.js" afterPath="$PROJECT_DIR$/js/gallery/ImagesRow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gallery/ImagesRow.js.map" afterPath="$PROJECT_DIR$/js/gallery/ImagesRow.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gallery/ImagesRow.ts" afterPath="$PROJECT_DIR$/js/gallery/ImagesRow.ts" />
+    </list>
     <ignored path="gallery.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,34 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Kiosk1920.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kiosk1920.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <marker date="1454187422590" expanded="true" signature="1817:2220" placeholder="{...}" />
-                <marker date="1454187422590" expanded="true" signature="1843:2145" placeholder="{&quot;width&quot;: 1860...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Gallery4.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gallery/Gallery4.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="164" column="45" selection-start-line="164" selection-start-column="45" selection-end-line="164" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kiosk1080.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kiosk1080.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.23077">
-              <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+              <caret line="215" column="55" selection-start-line="215" selection-start-column="55" selection-end-line="215" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -58,8 +46,8 @@
       <file leaf-file-name="Mobile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44973546">
-              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.49536425">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,15 +77,16 @@
         <entry file="file://$PROJECT_DIR$/js/gallery/ImagesRow.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-              <folding>
-                <marker date="1454191639514" expanded="true" signature="49:228" placeholder="//..." />
-              </folding>
+              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,11 +96,11 @@
         <option value="$PROJECT_DIR$/js/typing/tweenjs.d.ts" />
         <option value="$PROJECT_DIR$/rem/getimages.php" />
         <option value="$PROJECT_DIR$/Kiosk1920.php" />
-        <option value="$PROJECT_DIR$/js/gallery/ImagesRow.ts" />
         <option value="$PROJECT_DIR$/js/gallery/ImagesLibrary.ts" />
         <option value="$PROJECT_DIR$/Kiosk1080.php" />
         <option value="$PROJECT_DIR$/data/labels.json" />
         <option value="$PROJECT_DIR$/js/gallery/Gallery4.ts" />
+        <option value="$PROJECT_DIR$/js/gallery/ImagesRow.ts" />
         <option value="$PROJECT_DIR$/Mobile.php" />
       </list>
     </option>
@@ -131,7 +120,7 @@
     <option name="width" value="1858" />
     <option name="height" value="1096" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -190,6 +179,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\gallery\js\gallery" />
       <recent name="C:\wamp\www\gallery" />
       <recent name="C:\wamp\www\gallery\rem" />
     </key>
@@ -266,7 +256,7 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22637363" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15975104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15991692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -358,9 +348,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
-          <folding>
-            <marker date="1454191639514" expanded="true" signature="49:228" placeholder="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -403,9 +391,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
-          <folding>
-            <marker date="1454191639514" expanded="true" signature="49:228" placeholder="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -448,9 +434,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
-          <folding>
-            <marker date="1454191639514" expanded="true" signature="49:228" placeholder="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -585,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gallery/ImagesRow.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-          <folding>
-            <marker date="1454191639514" expanded="true" signature="49:228" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/gallery/ImagesLibrary.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -622,15 +596,31 @@
     <entry file="file://$PROJECT_DIR$/js/gallery/Gallery4.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="164" column="45" selection-start-line="164" selection-start-column="45" selection-end-line="164" selection-end-column="45" />
+          <caret line="215" column="55" selection-start-line="215" selection-start-column="55" selection-end-line="215" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gallery/ImagesRowLarge.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gallery/ImagesRow.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44973546">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.49536425">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
         </state>
       </provider>

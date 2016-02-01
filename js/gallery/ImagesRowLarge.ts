@@ -94,7 +94,7 @@ export class ImagesRow{
 
     static onImageClick:Function;
     private addImages(options):void{
-      var num = options.cols;//  Math.floor(options.canvasWidth/options.thumbSize);
+      var num =   Math.floor(options.canvasWidth/options.thumbSize);
         var imgs:DisplayObject[]=[];
         for (var i = 0, n = num; i < n; i++) {
             var bmp:DisplayObject = this.lib.getNext();
@@ -161,7 +161,6 @@ export class ImagesRow{
            // this.arangeImages();
 
         } else if(this.first>0){
-            console.log(this.images.length);
             var img:DisplayObject = this.images.pop();
             this.view.removeChild(img);
             img = this.lib.getNext();

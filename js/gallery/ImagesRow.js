@@ -74,7 +74,7 @@ var hallmark;
             });
         }
         ImagesRow.prototype.addImages = function (options) {
-            var num = Math.floor(options.canvasWidth / options.thumbSize);
+            var num = options.cols; //  Math.floor(options.canvasWidth/options.thumbSize);
             var imgs = [];
             for (var i = 0, n = num; i < n; i++) {
                 var bmp = this.lib.getNext();
@@ -126,6 +126,7 @@ var hallmark;
                 this.first = this.first + this.dist;
             }
             else if (this.first > 0) {
+                console.log(this.images.length);
                 var img = this.images.pop();
                 this.view.removeChild(img);
                 img = this.lib.getNext();

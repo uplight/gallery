@@ -213,7 +213,7 @@ namespace hallmark{
 
             for(var i=0,n=options.rows;i<n;i++){
                 var row:ImagesRow = new ImagesRow(this.imagesLibrary,options,i);
-                row.setPosition(0,i*200+25);
+                row.setPosition(0,i*options.rowHeight);
                 row.createBackground('#999999');
                 this.stage.addChild(row.view);
             }

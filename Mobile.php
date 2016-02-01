@@ -47,9 +47,6 @@ include('KioskHeader.php');
         </div>
 
     </section>
-<br/>
-    <br/>
-    <br/>
     <section id="mainview" >
 
     </section>
@@ -65,21 +62,31 @@ include('KioskHeader.php');
             var width  = $(window ).width();
             var height  = $(window ).height();
 
+            var cols = 5;
+            var rows = 7;
+            if(width<500){
+                rows=5;
+                cols=4;
+            }
+
+
 
             var options={
-                canvasWidth:1060,
-                canvasHeight:1760,
+                canvasWidth:width,
+                canvasHeight:height,
                 getimages:'rem/getimages',
-                thumbSize:150,
-                thumbDistance:200,
-                rowHeight:200,
-                rowWidth:1060,
-                rows:6,
-                cols:4,
-                prviewPaddingX:80,
-                prviewPaddingY:50,
-                previwWidth:900,
-                previwHeight:1200
+                thumbSize:100,
+                thumbDistance:120,
+                rowHeight:120,
+                rowWidth:width+50,
+               // rows:5,
+              //  cols:4,
+                 rows:7,
+                 cols:5,
+                prviewPaddingX:10,
+                prviewPaddingY:10,
+                previwWidth:width-20,
+                previwHeight:height -20
             }
 
             var gal = new hallmark.App($('#mainview'),options);

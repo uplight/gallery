@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 $folders=array('ChristmasCards'=>'Christmas Crads','NFLTeam'=>'NFL Team');
 $ar = array();
 foreach($folders as $folder=>$name) $ar = array_merge($ar,getFiles($folder,$name));

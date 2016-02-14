@@ -20,7 +20,7 @@ function getFiles($folder,$name){
         $img->cats = ($cat1===$cat2)?$cat1.'':$cat1.','.$cat2;
         $img->name=$name;
         $img->thumb='media/imgs/'.$folder.'/'.$file;
-        $img->image='media/imgs/'.$folder.'/OriginalFiles/'.$file;
+        $img->large='media/imgs/'.$folder.'/OriginalFiles/'.$file;
 
     $ar[]=$img;
     }

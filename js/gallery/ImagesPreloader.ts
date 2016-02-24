@@ -10,20 +10,26 @@ module uplight {
         thumb:string;
         large:string;
         image:HTMLImageElement;
-
         price:string;
         sale:boolean;
         cats:number[];
         i:number;
+        w:number;
+        h:number;
+
+
         constructor(obj,i:number){
             this.i=i;
             for(var str in obj)this[str] = obj[str];
             this.cats=obj.cats.split(',').map(Number);
-            this.image = new Image();
-            this.image.src = this.thumb;
-            this.image.onload = (evt)=>{
+            var image = new Image();
+            image.src = this.thumb;
+            image.onload = (evt)=>{
+                this.w =  image.naturalWidth;
+                this.h = image.naturalHeight;
                 ImagesPreloader.onImageLoaded(i);
             }
+            this.image = image;
         }
 
     }
@@ -46,6 +52,9 @@ module uplight {
             if(this.current>=ImagesPreloader.images.length) this.current=0;
            var img:ImageM =  ImagesPreloader.images[this.current];
             return img;
+        }
+        getImageByI(i:number):ImageM{
+            return ImagesPreloader.images[i];
         }
     }
 

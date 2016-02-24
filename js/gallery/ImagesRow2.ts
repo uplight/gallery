@@ -21,9 +21,54 @@ module gallery{
     import ImageM = uplight.ImageM;
 
 
+    export class ImageContainer extends Container{
+        imgX:number;
+        imgY:number;
+        imgW:number;
+        imgH:number;
+        i:number;
+        constructor(public imgM:ImageM,thumbWidth,thumbHeight){
+            super();
+            this.i = imgM.i;
+            var img =  imgM.image;
+            var w = img.naturalWidth;
+            var h = img.naturalHeight;
+            var sW:number = thumbWidth / w;
+            var sH:number = thumbHeight / h;
+            var  scale:number =  (sW<sH)?sW:sH;
+           // var cont:Container = new Container();
+            var graphics = new createjs.Graphics().beginFill("#ffffff").drawRect(0, 0, thumbWidth, thumbHeight);
+            var shape = new createjs.Shape(graphics);
+            this.addChild(shape);
+            var bmp:createjs.Bitmap = new createjs.Bitmap(img);
+            bmp.name='bmp';
+            bmp.scaleX = scale;
+            bmp.scaleY = scale;
+            w = w * scale;
+            h = h * scale;
+            this.imgW = w;
+            this.imgH = h;
+            this.imgX = (thumbWidth - w) / 2;
+            bmp.x =  this.imgX;
+            this.imgY  = (thumbHeight- h) / 2;
+            bmp.y = this.imgY;
+            this.addChild(bmp);
+            this.mouseChildren = false;
+
+            //  var cont:Container = new Container()
+            //  cont.addChild(vo.sale?ImagesLibrary.instance.getPrice2():ImagesLibrary.instance.getPrice1());
+            //  var txt:createjs.Text = new createjs.Text(vo.price, "30px Arial",'#FFFFFF');
+            // txt.x = 10;
+            // txt.y = 20;
+
+
+            // cont.addChild(txt);
+            // this.addChild(cont);
+
+            this.cache(0, 0, thumbWidth,thumbHeight);
+        }
+    }
 export class ImagesRow2{
-
-
     images:DisplayObject[]=[];
     cont:Container;
     private speed:number=0;
@@ -37,6 +82,7 @@ export class ImagesRow2{
     private thumbHeight:number;
     private thumbDistance:number;
     private mouse:uplight.MouseController;
+   static  onImageSelected:Function;
 
     constructor(private prop:any,private  lib:uplight.ImagesPreloader,private opt:any, private i:number){
         //view.setBounds(0,0,options.rowWidth,options.rowHeight);
@@ -46,7 +92,7 @@ export class ImagesRow2{
         var canv = document.createElement('canvas');
         canv.width = opt.rowWidth;
         canv.height = opt.rowHeight;
-
+        this.canvas = canv;
         this.$view = $(prop.id).append(canv);
         this.stage = new createjs.Stage(canv);
 
@@ -56,6 +102,7 @@ export class ImagesRow2{
         shape.cache(0, 0, canv.width,canv.height);
         shape.alpha=0.01;
        this.stage.addChild(shape);
+
         var cont:Container = new Container();
 
        // cont.name = 'row_'+id;
@@ -67,11 +114,13 @@ export class ImagesRow2{
         this.mouse=new uplight.MouseController(this.stage);
         this.mouse.onMoveX = (dist)=>this.move(dist);
         this.mouse.onMoveYMore =(dx,dy,evt:createjs.MouseEvent)=>{
-                console.log(dx,dy);
+            if(evt.target  instanceof ImageContainer) this.dispatchSelected(evt);
         }
-        this.mouse.onPressHold=(evt:createjs.MouseEvent)=>{
 
-            console.log(evt);
+        this.mouse.onPressHold=(evt:createjs.MouseEvent)=>{
+            if(evt.target  instanceof ImageContainer) this.dispatchSelected(evt)
+
+           // console.log('onhold',evt.target  instanceof ImageContainer);
         }
 
 
@@ -83,9 +132,6 @@ export class ImagesRow2{
         createjs.Ticker.framerate = 60;
         this.showFrameCount();
         var pressStart:number;
-
-
-
         var self = this;
         var count=0;
         var stamp = Date.now();
@@ -105,51 +151,26 @@ export class ImagesRow2{
 
     }
 
+    private dispatchSelected(evt){
+        var cont:ImageContainer =  evt.target;
+        var x= this.canvas.offsetLeft + cont.x+cont.imgX;
+        var y = this.canvas.offsetTop + cont.y+cont.imgY;
+        var w:number = cont.imgW;
+        var h:number = cont.imgH;
+        var i = evt.target.i;
+        ImagesRow2.onImageSelected(i,x,y,w,h);
+    }
     private frameCount:number
     private timestamp:number;
     private frameText:createjs.Text;
 
-
-    private createImage(imgM:ImageM):DisplayObject{
-        var img =  imgM.image;
-        var w = img.naturalWidth;
-        var h = img.naturalHeight;
-        var sW:number = this.thumbWidth / w;
-        var sH:number = this.thumbHeight / h;
-        var  scale:number =  (sW<sH)?sW:sH;
-        var cont:Container = new Container();
-        var graphics = new createjs.Graphics().beginFill("#ffffff").drawRect(0, 0, this.thumbWidth, this.thumbHeight);
-        var shape = new createjs.Shape(graphics);
-        cont.addChild(shape);
-        var bmp:createjs.Bitmap = new createjs.Bitmap(img);
-        bmp.name='bmp';
-        bmp.scaleX = scale;
-        bmp.scaleY = scale;
-        w = w * scale;
-        h = h * scale;
-        bmp.x = (this.thumbWidth - w) / 2;
-        bmp.y = (this.thumbHeight- h) / 2;
-        cont.addChild(bmp);
-
-        //  var cont:Container = new Container()
-        //  cont.addChild(vo.sale?ImagesLibrary.instance.getPrice2():ImagesLibrary.instance.getPrice1());
-        //  var txt:createjs.Text = new createjs.Text(vo.price, "30px Arial",'#FFFFFF');
-        // txt.x = 10;
-        // txt.y = 20;
-
-
-        // cont.addChild(txt);
-        // this.addChild(cont);
-
-        cont.cache(0, 0, this.thumbWidth, this.thumbHeight);
-        return cont
-    }
     private getNexImage():DisplayObject{
         var img:ImageM = this.lib.getNext();
-        if(!this.cache[img.i])  this.cache[img.i] = this.createImage(img);
+        if(!this.cache[img.i])  this.cache[img.i] =  new ImageContainer(img,this.thumbWidth,this.thumbHeight)
         return this.cache[img.i]
     }
     private getPrevImage():Bitmap{
+
 return null;
     }
     private showFrameCount(){
@@ -164,7 +185,7 @@ return null;
             var d= (Date.now()-this.timestamp);
               this.timestamp=Date.now();
                  var frames =  100/(d/1000);
-             console.log(frames);
+            // console.log(frames);
                  this.frameText.text = String(frames);
               this.frameCount=0;
            }
@@ -175,7 +196,7 @@ return null;
       var num = options.cols;//  Math.floor(options.canvasWidth/options.thumbSize);
         var imgs:DisplayObject[]=[];
         for (var i = 0, n = num; i < n; i++) {
-var img:DisplayObject = this.getNexImage();
+        var img:DisplayObject = this.getNexImage();
            // var bmp:createjs.Bitmap = new createjs.Bitmap(img.image);
            imgs.push(this.cont.addChild(img));
         }

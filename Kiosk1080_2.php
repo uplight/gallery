@@ -7,7 +7,7 @@ include('KioskHeader.php');
     body{
         width: 1080px;
         height: 1860px;
-        overflow: hidden;
+        overflow-y: auto;
     }
     .hide{
         display: none;
@@ -84,13 +84,58 @@ include('KioskHeader.php');
             </div>
 
         </div>
+        <div id="DragCover">
+            <style>
+                #DragCover{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(255,255,255,0.2);
+                    width: 1080px;
+                    height: 1000px;
+                }
+
+            </style>
+        </div>
+        <div id="Cart">
+            <style>
+                #CratImage{
+                    background-image: url('css/cart.png');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% 50%;
+                    margin: auto;
+                    position: relative;
+                }
+
+            </style>
+            <div id="CratImage">
+
+
+            </div>
+
+        </div>
+        <div id="imageDrag">
+            <style>
+                #imageDrag{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    background-size: contain;
+                    cursor: pointer;
+                }
+
+            </style>
+
+        </div>
+
 
     </section>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 
     <script src="js/libs/hammer.min.js"></script>
     <script src="js/gallery/ImagesPreloader.js"></script>
-
+    <script src="js/gallery/ImageDrag.js"></script>
     <script src="js/gallery/ImagesRow2.js"></script>
     <script src="js/gallery/MouseController.js"></script>
     <script src="js/gallery/gallery2.js"></script>

@@ -11,12 +11,10 @@
     
 
 module gallery2{
-
-
     export class Main{
         preloader:uplight.ImagesPreloader;
         private rows:gallery.ImagesRow2;
-        private imageDrag :ImageDrag
+        private imageDrag :ImageDrag;
         constructor($view:JQuery,private opt:any){
             this.loadData();
             this.imageCover = $('#DragCover').hide();

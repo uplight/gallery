@@ -138,8 +138,7 @@ var uplight;
                 this.multy = true;
                 $(evt.currentTarget).toggleClass('selected');
             }
-            else if (evt.shiftKey) {
-            }
+            else if (evt.shiftKey) { }
             else {
                 if (this.multy)
                     this.lstDests.children().removeClass('selected');

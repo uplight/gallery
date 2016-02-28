@@ -36,7 +36,6 @@ include('KioskHeader.php');
 <body>
 <div id="Templates" class="hidden"> </div>
 <div id="container">
-
     <section id="u-header" class="banner-color view-port">
         <style>
             #u-header{

@@ -4,6 +4,14 @@
     ///<reference path="../typing/jquery.d.ts"/>
 
 module uplight {
+
+interface VOImage{
+    id:number;
+    cats:string;
+    thumb:string;
+    large:string;
+
+}
     export class ImageM{
         name:string;
         id:number;
